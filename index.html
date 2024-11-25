@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBC Demand Forecasting</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Red Blood Cell Demand Forecasting</h1>
+            <p>
+                Leveraging time-series modeling to optimize healthcare inventory by accurately predicting RBC demand for the next 12 months.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <!-- Project Overview Section -->
+        <section id="intro">
+            <div class="container">
+                <h2>Project Overview</h2>
+                <p>
+                    This project addresses the critical challenge of balancing red blood cell (RBC) supply and demand by employing time-series forecasting. Using SARIMA models, we aim to minimize wastage and avoid shortages in healthcare systems. Our forecasts include 95% confidence intervals to account for uncertainty, ensuring robust decision-making.
+                </p>
+                <p>
+                    After testing multiple statistical and machine learning models, we selected the most efficient approach based on Mean Absolute Error (MAE) metrics in both training and testing phases.
+                </p>
+            </div>
+        </section>
+
+        <!-- Data Visualization Section -->
+        <section id="visualizations">
+            <div class="container">
+                <h2>Data Visualizations</h2>
+                <div class="visual">
+                    <h3>Forecast with Confidence Intervals</h3>
+                    <img src="forecast.png" alt="SARIMA Forecast Graph">
+                </div>
+                <div class="visual">
+                    <h3>Model Comparison (MAE)</h3>
+                    <img src="model_comparison.png" alt="Model Comparison Graph">
+                </div>
+            </div>
+        </section>
+
+        <!-- Model Analysis Section -->
+        <section id="model-analysis">
+            <div class="container">
+                <h2>Model Evaluation and Selection</h2>
+                <p>
+                    Several models were tested to determine the most accurate predictor of RBC demand. The table below summarizes the MAE (Mean Absolute Error) values for each model during training and testing phases:
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Model</th>
+                            <th>MAE (Train)</th>
+                            <th>MAE (Test)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Linear</td>
+                            <td>72.72</td>
+                            <td>89.99</td>
+                        </tr>
+                        <tr>
+                            <td>Polynomial</td>
+                            <td>65.47</td>
+                            <td>111.95</td>
+                        </tr>
+                        <tr>
+                            <td>Multivariate Spline</td>
+                            <td>55.20</td>
+                            <td>331.95</td>
+                        </tr>
+                        <tr>
+                            <td>SARIMAX(2, 2, 1) x (0, 0, 2, 12)</td>
+                            <td>69.19</td>
+                            <td>133.45</td>
+                        </tr>
+                        <tr>
+                            <td>SARIMAX(0, 1, 1) x (2, 1, 0, 12)</td>
+                            <td>65.92</td>
+                            <td>81.47</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    The SARIMAX(0, 1, 1) x (2, 1, 0, 12) model was selected as the best performer due to its lowest test MAE of 81.47. This model captures both short-term dependencies and seasonal patterns, making it ideal for RBC demand forecasting.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2024 RBC Demand Forecasting. Built with ❤️ by Advik.</p>
+        </div>
+    </footer>
+</body>
+</html>

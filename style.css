@@ -1,0 +1,77 @@
+/* General Reset */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #0044cc;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+/* Main Section */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+#visualizations img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.visual {
+    margin-bottom: 30px;
+}
+
+/* Download Section */
+.button {
+    display: inline-block;
+    background: #0044cc;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background: #003399;
+}
+
+/* Footer */
+footer {
+    background: #0044cc;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
